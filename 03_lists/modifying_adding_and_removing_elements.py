@@ -8,7 +8,7 @@ print(motorcycles)
 # adding elements
 motorcycles.append("honda")
 
-cars = []
+cars: list[str] = []
 cars.append("suzuki")
 cars.append("honda")
 cars.append("toyota")

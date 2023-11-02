@@ -10,7 +10,6 @@ motorcycles = ['honda', 'yamaha', 'suzuki']
 print(motorcycles[-1])
 
 # negative index can cause error when list is empty
-# todo: add type
-cars = []
+cars: list[str] = []
 # error here
 # print(cars[-1])
