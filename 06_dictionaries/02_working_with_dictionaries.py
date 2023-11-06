@@ -105,6 +105,7 @@ alien_0 = {"color": "green", "speed": "slow"}
 # print(alien_0["points"])
 
 # get(key, value to be returned)
-# value to be returned is optional
 point_value = alien_0.get("points", "No point value assigned.")
 print(point_value)
+
+# value to be returned is optional, if not provided default is None
