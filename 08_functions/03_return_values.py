@@ -20,6 +20,7 @@ def return_greeting(first_name,  last_name, middle_name=""):
     return message.title()
 
 
+# middle_name argument should be last to match order of parameters
 musician = return_greeting("john", "hooker", "lee")
 print(musician)
 
@@ -27,7 +28,7 @@ print(musician)
 musician = return_greeting("john", "hooker")
 print(musician)
 # but there is an additional space in output
-# to remove that middle_name variable should not be in return statement
+# to remove that, middle_name variable should not be in return statement
 
 
 def return_greeting2(first_name,  last_name, middle_name=""):
