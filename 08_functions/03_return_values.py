@@ -44,3 +44,58 @@ def return_greeting2(first_name,  last_name, middle_name=""):
 
 musician = return_greeting2("john", "hooker")
 print(musician)
+
+
+# Returning a dictionary
+def build_person(first_name, last_name):
+    """Returns a dictionary of information about a person"""
+    person = {"first": first_name, "last": last_name}
+    return person
+
+
+musician = build_person("jimi", "hendrix")
+print(f"\n{musician}")
+
+
+def build_person2(first_name, last_name, age=None):
+    """Return a dictionary of a person's information"""
+    person = {"first": first_name, "last": last_name}
+    # if age was provided add it into dictionary
+    if age:
+        person["age"] = age
+    return person
+
+# 'None' is used when a variable has no value assigned to it
+# it evaluates to false in conditional tests
+
+
+musician = build_person2("jimi", "hendrix", 27)
+print(f"\n{musician}")
+
+
+# Using a function with a while loop
+# while True:
+#     print("\nPlease enter your name:")
+#     f_name = input("First name: ")
+#     l_name = input("Last name: ")
+
+#     # calling function declared on top
+#     formatted_name = get_formatted_name(f_name, l_name)
+#     print(f"\nHello, {formatted_name}")
+# but this is an infitnite loop, since there is no exit condition
+
+
+while True:
+    print("\nEnter your name")
+    print("(enter 'q' at any time to quit)")
+
+    f_name = input("First name: ")
+    if f_name == "q":
+        break
+
+    l_name = input("Last name: ")
+    if l_name == "q":
+        break
+
+    formatted_name = get_formatted_name(f_name, l_name)
+    print(f"\nHello, {formatted_name}!")
