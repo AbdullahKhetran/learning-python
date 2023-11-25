@@ -1,8 +1,10 @@
+from typing import TypedDict, Optional
+
 # the value that a function returns is called a return value
 
 
 # Returning a simple return value
-def get_formatted_name(first_name, last_name):
+def get_formatted_name(first_name: str, last_name: str) -> str:
     """Return a neatly formatted full name."""
     full_name = f"{first_name} {last_name}"
     return full_name.title()
@@ -14,7 +16,7 @@ print(musician)
 
 # Optional Argument
 # empty default value, move to end of parameter list
-def return_greeting(first_name,  last_name, middle_name=""):
+def return_greeting(first_name: str,  last_name: str, middle_name: str = "") -> str:
     """Return a greeting message with neatly formatted full name"""
     message = f"\nWelcome {first_name} {middle_name} {last_name}"
     return message.title()
@@ -31,7 +33,7 @@ print(musician)
 # to remove that, middle_name variable should not be in return statement
 
 
-def return_greeting2(first_name,  last_name, middle_name=""):
+def return_greeting2(first_name: str,  last_name: str, middle_name: str = "") -> str:
     """Return a greeting message with neatly formatted full name"""
     if middle_name:
         message = f"\nWelcome {first_name} {middle_name} {last_name}"
@@ -47,20 +49,24 @@ print(musician)
 
 
 # Returning a dictionary
-def build_person(first_name, last_name):
+def build_person(first_name: str, last_name: str) -> dict[str,str]:
     """Returns a dictionary of information about a person"""
     person = {"first": first_name, "last": last_name}
     return person
 
 
-musician = build_person("jimi", "hendrix")
-print(f"\n{musician}")
+musician2 = build_person("jimi", "hendrix")
+print(f"\n{musician2}")
 
+class Person(TypedDict):
+    first: str
+    last: str
+    age: Optional[int]
 
-def build_person2(first_name, last_name, age=None):
+def build_person2(first_name: str, last_name: str, age: int | None = None) -> Person:
     """Return a dictionary of a person's information"""
-    person = {"first": first_name, "last": last_name}
-    # if age was provided add it into dictionary
+    person: Person = {"first": first_name, "last": last_name, "age": None}
+    # if age was provided, add it to the dictionary
     if age:
         person["age"] = age
     return person
@@ -69,8 +75,8 @@ def build_person2(first_name, last_name, age=None):
 # it evaluates to false in conditional tests
 
 
-musician = build_person2("jimi", "hendrix", 27)
-print(f"\n{musician}")
+musician3 = build_person2("jimi", "hendrix", 27)
+print(f"\n{musician3}")
 
 
 # Using a function with a while loop

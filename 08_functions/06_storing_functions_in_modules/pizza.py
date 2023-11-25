@@ -1,6 +1,6 @@
 # function can be stored in seperate file called 'module'
 
-def make_pizza(size, *toppings):
+def make_pizza(size: int, *toppings: str) -> None:
     """Summarize the pizza we are about to make."""
     print(f"\nMaking a {size}-inch pizza with the following toppings:")
     for topping in toppings:

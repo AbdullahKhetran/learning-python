@@ -1,7 +1,7 @@
 # Positional Arguments
 # passing with the same SAME the parameter were provided
 
-def describe_pet(animal_type, pet_name):
+def describe_pet(animal_type: str, pet_name: str) -> None:
     """Display information about a pet"""
     print(f"\nI have a {animal_type}")
     print(f"My {animal_type}'s name is {pet_name}")
@@ -27,7 +27,7 @@ describe_pet(animal_type="hamster", pet_name="harry")
 
 # default value parameters have to be listed in the end so that
 # python can interpret positional arguments correctly
-def describe_pet2(pet_name, animal_type="dog"):
+def describe_pet2(pet_name: str, animal_type: str = "dog") -> None:
     print(f"\nI have a {animal_type}")
     print(f"My {animal_type}'s name is {pet_name}")
 
@@ -40,7 +40,7 @@ describe_pet2("harry", "hamster")
 
 # Equivalent postional calls
 # multiple ways to call function espically if default value is used
-def describe_pet3(pet_name, animal_type="dog"):
+def describe_pet3(pet_name: str, animal_type: str = "dog") -> None:
     print(f"\nI have a {animal_type}")
     print(f"My {animal_type}'s name is {pet_name}")
 
@@ -59,7 +59,7 @@ describe_pet3(animal_type="hamster", pet_name="harry")
 
 # if you provide less or more arguments then you will get error
 
-def describe_pet4(animal_type, pet_name):
+def describe_pet4(animal_type: str, pet_name: str) -> None:
     """Display information about a pet."""
     print(f"\nI have a {animal_type}.")
     print(f"My {animal_type}'s name is {pet_name.title()}.")

@@ -1,4 +1,4 @@
-def greet_users(names):
+def greet_users(names: list[str]) -> None:
     """Print a simple greeting to each user in the list"""
     for name in names:
         msg = f"Hello, {name.title()}!"
@@ -10,7 +10,7 @@ greet_users(usernames)
 
 
 # Modifying a list in a function
-def print_models(unprinted_designs, completed_models):
+def print_models(unprinted_designs: list[str], completed_models: list[str]) -> None:
     """
     Simulate printing each desing, until none are left
     Move each desing to completed_models after printing
@@ -22,7 +22,7 @@ def print_models(unprinted_designs, completed_models):
         completed_models.append(current_design)
 
 
-def show_completed_models(completed_models):
+def show_completed_models(completed_models: list[str]) -> None:
     """Show all the models that we printed."""
     print("\nThe following models have been printed: ")
     for completed_model in completed_models:
