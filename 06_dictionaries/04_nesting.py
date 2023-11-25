@@ -1,20 +1,23 @@
+from typing import TypedDict
+
 # A list of dictionaries
 alien_0 = {"color": "green", "points": 5}
 alien_1 = {"color": "yellow", "points": 10}
 alien_2 = {"color": "red", "points": 15}
 
-aliens = [alien_0, alien_1, alien_2]
+initial_aliens = [alien_0, alien_1, alien_2]
 
-for alien in aliens:
-    print(alien)
+for initial_alien in initial_aliens:
+    print(initial_alien)
 
+Alien = TypedDict("Alien", {"color": str, "points": int, "speed": str})
 
 # empty list for storing aliens
-aliens = []
+aliens: list[Alien] = []
 
 # generating 30 green aliens
 for alien_number in range(30):
-    new_alien = {"color": "green", "points": 5, "speed": "slow"}
+    new_alien : Alien = {"color": "green", "points": 5, "speed": "slow"}
     aliens.append(new_alien)
 
 # print first 5 aliens
@@ -40,7 +43,9 @@ print(f"Total number of aliens: {len(aliens)}")
 print("")
 # A list in a dictionary
 
-pizza = {
+Pizza = TypedDict("Pizza", {"crust": str, "toppings": list[str]})
+
+pizza : Pizza = {
     "crust": "thick",
     # list inside a dictionary
     "toppings": ["mushrooms", "extra cheese"],
@@ -95,7 +100,6 @@ for username, user_info in users.items():
     print(f"\tFull name: {full_name.title()}")
     print(f"\tLocation: {location.title()}")
 
-# In this case structure of each user's dictionary was same.
-# this makes nested dictionaries easier to work with
-# If keys were different, then code inside for loop
-# would be more complicated
+# In this case structure of each user's dictionary was same. This makes nested 
+# dictionaries easier to work with. If keys were different, then code inside 
+# for loop would be more complicated
