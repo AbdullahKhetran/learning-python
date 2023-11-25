@@ -14,7 +14,7 @@ alien = {"color": "green"}
 value = alien["color"]
 print(value)
 
-alien_0 = {"color": "green", "points": 5}
+alien_0 : dict[str, str | int] = {"color": "green", "points": 5}
 new_points = alien_0["points"]
 print(f"You just earned {new_points} points!")
 
