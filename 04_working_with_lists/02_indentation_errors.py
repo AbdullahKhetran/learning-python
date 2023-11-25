@@ -1,4 +1,5 @@
-# Python uses indentation to determine how a line, or group of lines, is related to the rest of the program.
+# Python uses indentation to determine how a line, or group of lines,
+#  is related to the rest of the program.
 
 # Forgetting to indent
 magicians = ['alice', 'david', 'carolina']
@@ -10,7 +11,8 @@ magicians = ['alice', 'david', 'carolina']
 # forgetting to indent additional lines
 for magician in magicians:
     print(f"{magician.title()}, that was a great trick")
-# next line is not indented even though it was supposed to. But still no error cause syntax is valid. this is logical error
+# next line is not indented even though it was supposed to. But still no error 
+# cause syntax is valid. this is logical error
 print(f"I can't wait to see your next trick, {magician.title()}.\n")
 
 

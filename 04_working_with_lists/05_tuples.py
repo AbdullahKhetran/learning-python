@@ -10,12 +10,15 @@ print(
 # dimensions[0] = 250
 
 
-# Note: Tuples are technically defined by absence of square brackets. Parentheses are used to make them more readable
+# Note: Tuples are technically defined by absence of square brackets.
+# Parentheses are used to make them more readable
 # This is a valid tuple
 triangle = 3, 4, 5
 print(f"triangle tuple: {triangle}")
 
-# But if you want a tuple of only 1 element the use a trailing comma otherwise it will be treated as a variable
+# But if you want a tuple of only 1 element the use a trailing comma otherwise 
+# it will be treated as a variable
+
 # tuple
 circel_radius = 4,
 print(f"Circle tuple: {circel_radius}")
