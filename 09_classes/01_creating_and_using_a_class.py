@@ -8,18 +8,18 @@ class Dog:
     """A simple attempt to model a dog."""
 
 # 2
-    def __init__(self, name, age):
+    def __init__(self, name: str, age: int) -> None:
         """Initialize name and age attributes."""
 # 3
         self.name = name
         self.age = age
 
 # 4
-    def sit(self):
+    def sit(self) -> None:
         """Simulate a dog sitting in response to a command."""
         print(f"{self.name} is now sitting.")
 
-    def roll_over(self):
+    def roll_over(self) -> None:
         """Simulate rolling over in response to a command."""
         print(f"{self.name} rolled over!")
 
