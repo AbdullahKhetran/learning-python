@@ -7,3 +7,11 @@ print(contents)
 
 contents_2 = path.read_text().rstrip()
 print(contents_2)
+
+
+# Accessing a File’s Lines
+lines = contents.splitlines()
+for line in lines:
+    print(line)
+
+
