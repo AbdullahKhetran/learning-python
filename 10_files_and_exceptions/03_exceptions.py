@@ -47,7 +47,7 @@ while flag:
 from pathlib import Path
 
 # this file is missing
-path = Path("alice.txt")
+path = Path("tom.txt")
 
 # this will give error
 # contents = path.read_text(encoding="utf-8")
@@ -59,3 +59,49 @@ except FileNotFoundError:
 
 
 # Analyzing text
+path = Path("alice.txt")
+
+def count_words(path):
+    """Count the approximate number of words in a file."""
+    try:
+        contents = path.read_text(encoding="utf-8")
+    except FileNotFoundError:
+        print(f"\nSorry, the file {path} does not exist")
+    else:
+        # Count the number of words in the file
+        words = contents.split()
+        num_words = len(words)
+        print(f"\nThe file {path} has about {num_words} words.")
+
+count_words(path)
+
+
+# Working with Multiple Files
+filenames = ["alice.txt","siddhartha.txt","moby_dick.txt","little_women.txt"]
+
+for filename in filenames:
+    path = Path(filename)
+    count_words(path)
+
+
+# Failing Silently
+# you dont need to report every exception. sometimes you want the program to
+# fail silently and continue as if nothing happened. use 'pass' in except block
+
+print("\nFailing Silently")
+def count_words_silent(path):
+    """Count the approximate number of words in a file."""
+    try:
+        contents = path.read_text(encoding="utf-8")
+    except FileNotFoundError:
+        # print(f"\nSorry, the file {path} does not exist")
+        pass # fail silently
+    else:
+        # Count the number of words in the file
+        words = contents.split()
+        num_words = len(words)
+        print(f"The file {path} has about {num_words} words.")
+
+for filename in filenames:
+    path = Path(filename)
+    count_words_silent(path)
