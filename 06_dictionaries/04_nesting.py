@@ -17,7 +17,7 @@ aliens: list[Alien] = []
 
 # generating 30 green aliens
 for alien_number in range(30):
-    new_alien : Alien = {"color": "green", "points": 5, "speed": "slow"}
+    new_alien: Alien = {"color": "green", "points": 5, "speed": "slow"}
     aliens.append(new_alien)
 
 # print first 5 aliens
@@ -45,7 +45,7 @@ print("")
 
 Pizza = TypedDict("Pizza", {"crust": str, "toppings": list[str]})
 
-pizza : Pizza = {
+pizza: Pizza = {
     "crust": "thick",
     # list inside a dictionary
     "toppings": ["mushrooms", "extra cheese"],
@@ -100,6 +100,6 @@ for username, user_info in users.items():
     print(f"\tFull name: {full_name.title()}")
     print(f"\tLocation: {location.title()}")
 
-# In this case structure of each user's dictionary was same. This makes nested 
-# dictionaries easier to work with. If keys were different, then code inside 
+# In this case structure of each user's dictionary was same. This makes nested
+# dictionaries easier to work with. If keys were different, then code inside
 # for loop would be more complicated

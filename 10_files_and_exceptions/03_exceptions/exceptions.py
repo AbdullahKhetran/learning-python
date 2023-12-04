@@ -5,6 +5,10 @@
 
 # Using try-except Blocks
 # try-except block handles error gracefully and dosent stop the program
+
+from pathlib import Path
+
+
 try:
     print(5/0)
 except ZeroDivisionError:
@@ -33,18 +37,17 @@ while flag:
     except ZeroDivisionError:
         print("You cant divide by 0!")
     # else block
-    else:        
+    else:
         print(answer)
         flag = False
 
 # code that can cause an error goes to try block
 # code to deal with error goes in except block
-# code that should run if no error goes in else block 
+# code that should run if no error goes in else block
 
 
 # Handling the FileNotFoundError Exception
 
-from pathlib import Path
 
 # this file is missing
 path = Path("tom.txt")
@@ -61,6 +64,7 @@ except FileNotFoundError:
 # Analyzing text
 path = Path("alice.txt")
 
+
 def count_words(path):
     """Count the approximate number of words in a file."""
     try:
@@ -73,11 +77,13 @@ def count_words(path):
         num_words = len(words)
         print(f"\nThe file {path} has about {num_words} words.")
 
+
 count_words(path)
 
 
 # Working with Multiple Files
-filenames = ["alice.txt","siddhartha.txt","moby_dick.txt","little_women.txt"]
+filenames = ["alice.txt", "siddhartha.txt",
+             "moby_dick.txt", "little_women.txt"]
 
 for filename in filenames:
     path = Path(filename)
@@ -89,18 +95,21 @@ for filename in filenames:
 # fail silently and continue as if nothing happened. use 'pass' in except block
 
 print("\nFailing Silently")
+
+
 def count_words_silent(path):
     """Count the approximate number of words in a file."""
     try:
         contents = path.read_text(encoding="utf-8")
     except FileNotFoundError:
         # print(f"\nSorry, the file {path} does not exist")
-        pass # fail silently
+        pass  # fail silently
     else:
         # Count the number of words in the file
         words = contents.split()
         num_words = len(words)
         print(f"The file {path} has about {num_words} words.")
+
 
 for filename in filenames:
     path = Path(filename)

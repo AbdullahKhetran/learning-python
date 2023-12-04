@@ -32,7 +32,7 @@ print(pets)
 print("")
 # Filling a dictionary with user input
 
-responses : dict[str, str] = {}
+responses: dict[str, str] = {}
 # Setting a flag
 polling_active = True
 

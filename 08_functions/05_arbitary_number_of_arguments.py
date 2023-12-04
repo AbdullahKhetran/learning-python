@@ -1,6 +1,6 @@
 # sometimes you dont know the number of arguments you will want
 
-def print_toppings(*toppings:str) -> None:
+def print_toppings(*toppings: str) -> None:
     # * indicates collection of arbitary number of arguments
     """Print the list of toppings that have been requested."""
     print(toppings)
@@ -42,7 +42,7 @@ make_pizza(12, "mushrooms", "green peppers", "extra cheese")
 # Arbitary key-value pairs
 # ** for accepting key-value pairs
 
-def build_profile(first: str, last: str, **user_info:str) -> dict[str,str]:
+def build_profile(first: str, last: str, **user_info: str) -> dict[str, str]:
     # dictionary called user_info will be created
     """Build a dictionary containing everything we know about a user"""
     user_info["first_name"] = first

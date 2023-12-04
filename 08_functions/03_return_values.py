@@ -49,7 +49,7 @@ print(musician)
 
 
 # Returning a dictionary
-def build_person(first_name: str, last_name: str) -> dict[str,str]:
+def build_person(first_name: str, last_name: str) -> dict[str, str]:
     """Returns a dictionary of information about a person"""
     person = {"first": first_name, "last": last_name}
     return person
@@ -58,10 +58,12 @@ def build_person(first_name: str, last_name: str) -> dict[str,str]:
 musician2 = build_person("jimi", "hendrix")
 print(f"\n{musician2}")
 
+
 class Person(TypedDict):
     first: str
     last: str
     age: Optional[int]
+
 
 def build_person2(first_name: str, last_name: str, age: int | None = None) -> Person:
     """Return a dictionary of a person's information"""

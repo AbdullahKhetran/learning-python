@@ -13,5 +13,3 @@ print(contents_2)
 lines = contents.splitlines()
 for line in lines:
     print(line)
-
-

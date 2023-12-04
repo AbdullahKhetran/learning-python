@@ -16,7 +16,7 @@ print(
 triangle = 3, 4, 5
 print(f"triangle tuple: {triangle}")
 
-# But if you want a tuple of only 1 element the use a trailing comma otherwise 
+# But if you want a tuple of only 1 element the use a trailing comma otherwise
 # it will be treated as a variable
 
 # tuple

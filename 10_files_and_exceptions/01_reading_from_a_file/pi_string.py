@@ -27,4 +27,3 @@ for line in lines_2:
 
 print(f"{pi_string_2[:52]}...")
 print(len(pi_string_2))
-

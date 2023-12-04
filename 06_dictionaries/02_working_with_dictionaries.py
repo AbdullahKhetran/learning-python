@@ -7,7 +7,7 @@ from typing import TypedDict
 
 # Accessing values in a dictionary
 
-alien : dict[str,str] = {"color": "green"}
+alien: dict[str, str] = {"color": "green"}
 
 # name_of_dictionary[key]
 
@@ -15,8 +15,7 @@ value = alien["color"]
 print(value)
 
 
-
-alien_0  = {"color": "green", "points": 5}
+alien_0 = {"color": "green", "points": 5}
 new_points = alien_0["points"]
 print(f"You just earned {new_points} points!")
 
@@ -44,6 +43,7 @@ class Alien_1(TypedDict):
     x_position: int
     y_position: int
     speed: str
+
 
 alien_0 = {"color": "green"}
 print(f"The alien is {alien_0['color']}")

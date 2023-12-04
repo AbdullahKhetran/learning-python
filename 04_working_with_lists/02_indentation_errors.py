@@ -11,7 +11,7 @@ magicians = ['alice', 'david', 'carolina']
 # forgetting to indent additional lines
 for magician in magicians:
     print(f"{magician.title()}, that was a great trick")
-# next line is not indented even though it was supposed to. But still no error 
+# next line is not indented even though it was supposed to. But still no error
 # cause syntax is valid. this is logical error
 print(f"I can't wait to see your next trick, {magician.title()}.\n")
 
